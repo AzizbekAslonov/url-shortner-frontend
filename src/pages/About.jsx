@@ -1,22 +1,25 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Loader } from '../components/Loader'
+import { AuthContext } from '../context/AuthContext'
 import { useHttp } from '../hooks/http.hook'
 
 export const AboutPage = () => {
     const [details, setDetails] = useState(null)
     const { request, loading } = useHttp()
+    const { user } = useContext(AuthContext)
+
+    const fetchDetails = useCallback(async () => {
+        try {
+            const fetched = await request('/user/details', 'GET', null, {
+                Authorization: `Bearer ${localStorage.getItem('token')}`
+            })
+            setDetails(fetched)
+        } catch (e) { }
+    }, [])
 
     useEffect(() => {
-        const fetchDetails = async () => {
-            try {
-                const fetched = await request('/user/details', 'GET', null, {
-                    Authorization: `Bearer ${localStorage.getItem('token')}`
-                })
-                setDetails(fetched)
-            } catch (e) { }
-        }
-        fetchDetails()
+        user && fetchDetails()
     }, [])
 
     return (
