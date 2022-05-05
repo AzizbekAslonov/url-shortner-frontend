@@ -20,7 +20,7 @@ export const AboutPage = () => {
 
     useEffect(() => {
         user && fetchDetails()
-    }, [])
+    }, [user])
 
     return (
         <div className="container">
