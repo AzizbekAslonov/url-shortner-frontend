@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Loader } from '../components/Loader'
 import { useHttp } from '../hooks/http.hook'
 
 export const AboutPage = () => {
     const [details, setDetails] = useState(null)
-    const { request } = useHttp()
+    const { request, loading } = useHttp()
 
     useEffect(() => {
         const fetchDetails = async () => {
@@ -21,9 +22,13 @@ export const AboutPage = () => {
     return (
         <div className="container">
             <div className="py-5">
-                <h3 className="mb-3">Havolalar soni: {details?.refs || 0} ta</h3>
-                <h3 className="mb-3">Umumiy ko'rishlar soni: {details?.clicks || 0} ta</h3>
-                <hr className="my-5" />
+                {loading ? <Loader /> : (
+                    <>
+                        <h3 className="mb-3">Havolalar soni: {details?.refs || 0} ta</h3>
+                        <h3 className="mb-3">Umumiy ko'rishlar soni: {details?.clicks || 0} ta</h3>
+                        <hr className="my-5" />
+                    </>
+                )}
                 <div className="mb-5">
                     <h1 className="display-5 mb-0">
                         References Application by<a style={{ textDecoration: 'none' }} target="_blank" rel="noopener noreferrer" href="https://t.me/AzizbekAslonov"><i> Azizbek</i></a>
