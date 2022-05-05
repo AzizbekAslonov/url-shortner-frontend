@@ -20,7 +20,7 @@ export const LinksList = ({ links }) => {
                 return (
                   <tr key={link.id}>
                     <td>{index + 1}</td>
-                    <td>{link.link}</td>
+                    <td>{link.link.length > 30 ? `${link.link.slice(0, 30)}...` : link.link}</td>
                     <td>{link.shortLink}</td>
                     <td>
                       <Link className='link-primary' to={`/detail/${link.id}`}>Ochish</Link>

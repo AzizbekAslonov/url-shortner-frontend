@@ -10,7 +10,7 @@
 
 
 .app-text {
-  font-size: calc(16px + (17 - 16) * ((100vw - 320px) / (1440 - 320)));
+  font-size: calc(15px + (17 - 15) * ((100vw - 320px) / (1440 - 320)));
 }
 
 @media(max-width: 767px) {
