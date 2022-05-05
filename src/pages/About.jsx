@@ -26,9 +26,9 @@ export const AboutPage = () => {
                     <>
                         <h3 className="mb-3">Havolalar soni: {details?.refs || 0} ta</h3>
                         <h3 className="mb-3">Umumiy ko'rishlar soni: {details?.clicks || 0} ta</h3>
-                        <hr className="my-5" />
                     </>
                 )}
+                <hr className="my-5" />
                 <div className="mb-5">
                     <h1 className="display-5 mb-0">
                         References Application by<a style={{ textDecoration: 'none' }} target="_blank" rel="noopener noreferrer" href="https://t.me/AzizbekAslonov"><i> Azizbek</i></a>
