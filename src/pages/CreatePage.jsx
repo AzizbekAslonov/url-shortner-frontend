@@ -36,14 +36,14 @@ export const CreatePage = () => {
             <input
               id="link"
               type="text"
-              className="form-control"
+              className="form-control create-input"
               placeholder="name@example.com"
               value={link}
               disabled={loading}
               onChange={e => setLink(e.target.value)}
               onKeyPress={pressHandler}
             />
-            <label htmlFor="link">Havolani kiriting:</label>
+            <label className='create-label' htmlFor="link">Havolani kiriting:</label>
           </div>
         </div>
       </div>

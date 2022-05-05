@@ -6,7 +6,7 @@ export const LinkCard = ({ link }) => (
 
     <div className="app-text">
       <p>Qisqartirilgan: <a href={link.shortLink} target="_blank" rel="noopener noreferrer">{link.shortLink}</a></p>
-      <p>Qayerdan: <a style={{ wordBreak: 'break-all' }} href={link.link} target="_blank" rel="noopener noreferrer">{link.link}</a></p>
+      <p>Qayerdan: <a href={link.link} target="_blank" rel="noopener noreferrer">{link.link}</a></p>
       <p>Kirishlar soni: <strong>{link.clicks}</strong></p>
       <p>Qachondan: <strong>{new Date(link.date).toLocaleDateString()}</strong></p>
     </div>

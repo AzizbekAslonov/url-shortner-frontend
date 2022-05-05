@@ -30,7 +30,7 @@ export const AboutPage = () => {
                     </h1>
                     <p className="text-muted">version 1.0.0</p>
                 </div>
-                <div className="fs-5 mb-5">
+                <div className="app-text mb-5">
                     Uzundan uzun havolalar bilan ishlash uchun qulay web-dastur
                     <br />
                     <ul>

@@ -5,8 +5,8 @@ export const LinksList = ({ links }) => {
   return (
     <div className='mt-4 mt-md-5'>
       {links.length ? (
-        <div className='table-responsive-sm'>
-          <table className="table">
+        <div className='table-responsive'>
+          <table className="table app-text">
             <thead>
               <tr>
                 <th scope="col">№</th>
@@ -20,7 +20,7 @@ export const LinksList = ({ links }) => {
                 return (
                   <tr key={link.id}>
                     <td>{index + 1}</td>
-                    <td style={{ wordBreak: "break-all" }}>{link.link}</td>
+                    <td>{link.link}</td>
                     <td>{link.shortLink}</td>
                     <td>
                       <Link className='link-primary' to={`/detail/${link.id}`}>Ochish</Link>

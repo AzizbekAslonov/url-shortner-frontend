@@ -1,4 +1,3 @@
-/* @import "~materialize-css/dist/css/materialize.css"; */
 @import "~bootstrap/dist/css/bootstrap.css";
 
 .fullscreen {
@@ -9,9 +8,28 @@
   padding: 20px 0;
 }
 
-@media(min-width: 768px) {
-  .app-text {
-    font-size: 18px;
+
+.app-text {
+  font-size: calc(16px + (17 - 16) * ((100vw - 320px) / (1440 - 320)));
+}
+
+@media(max-width: 767px) {
+  .create-label {
+    font-size: 15px !important;
+  }
+}
+
+@media(max-width: 576px) {
+  .navbar {}
+
+  .navbar .container {
+    display: block !important;
+    text-align: center;
+  }
+
+  .navbar-nav {
+    justify-content: space-between;
+    margin-top: 15px;
   }
 }
 

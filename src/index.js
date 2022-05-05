@@ -4,7 +4,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-export const API_URL = 'https://urla.herokuapp.com'
+// export const API_URL = 'https://urla.herokuapp.com'
+export const API_URL = 'http://localhost:5000'
 
 ReactDOM.render(
     <React.StrictMode>
