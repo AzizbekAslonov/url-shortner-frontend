@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-export const API_URL = 'https://bitly-u.herokuapp.com'
+export const API_URL = 'https://urla.herokuapp.com'
 
 ReactDOM.render(
     <React.StrictMode>
